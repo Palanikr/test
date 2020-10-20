@@ -1,4 +1,4 @@
-stage('Docker Build'){
+('Docker Build'){
    sh 'docker build -t palanikumar7/myweb:0.0.2 .'
    }
    stage('Docker Push'){
