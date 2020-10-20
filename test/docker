@@ -1,0 +1,9 @@
+stage('Docker Build'){
+   sh 'docker build -t palanikumar7/myweb:0.0.2 .'
+   }
+   stage('Docker Push'){
+   withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
+   sh "docker login -u palanikumar7 -p ${dockerPassword}"
+    }
+   sh 'docker push palanikumar7/myweb:0.0.2'
+   }
