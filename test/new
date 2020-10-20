@@ -1,0 +1,3 @@
+stage('Docker deploy'){
+   sh 'docker run -d -p 8090:8080 --name tomcattest palanikumar7/myweb:0.0.2' 
+   }
